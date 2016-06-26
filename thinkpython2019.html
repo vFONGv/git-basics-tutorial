@@ -3,6 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <meta name="generator" content="hevea 2.09">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="thinkpython2.css">
 <title>Inheritance</title>
 </head>
@@ -29,8 +31,8 @@ programming is <span class="c010">inheritance</span>. Inheritance is the ability
 define a new class that is a modified version of an existing class.
 In this chapter I demonstrate inheritance using classes that represent
 playing cards, decks of cards, and poker hands.
-<a id="hevea_default1544"></a> 
-<a id="hevea_default1545"></a> 
+<a id="hevea_default1544"></a>
+<a id="hevea_default1545"></a>
 <a id="hevea_default1546"></a></p><p>If you don&#X2019;t play
 poker, you can read about it at
 <a href="http://en.wikipedia.org/wiki/Poker"><span class="c004">http://en.wikipedia.org/wiki/Poker</span></a>, but you don&#X2019;t have to; I&#X2019;ll
@@ -98,7 +100,7 @@ do that is with lists of strings. We assign these lists to <span class="c010">cl
 attributes</span>:</p><pre class="verbatim"># inside class Card:
 
     suit_names = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
-    rank_names = [None, 'Ace', '2', '3', '4', '5', '6', '7', 
+    rank_names = [None, 'Ace', '2', '3', '4', '5', '6', '7',
               '8', '9', '10', 'Jack', 'Queen', 'King']
 
     def __str__(self):
@@ -106,7 +108,7 @@ attributes</span>:</p><pre class="verbatim"># inside class Card:
                              Card.suit_names[self.suit])
 </pre><p>Variables like <code>suit_names</code> and <code>rank_names</code>, which are
 defined inside a class but outside of any method, are called
-class attributes because they are associated with the class object 
+class attributes because they are associated with the class object
 <span class="c004">Card</span>.
 <a id="hevea_default1559"></a>
 <a id="hevea_default1560"></a></p><p>This term distinguishes them from variables like <span class="c004">suit</span> and <span class="c004">rank</span>, which are called <span class="c010">instance attributes</span> because they are
@@ -178,7 +180,7 @@ and so on.
         t2 = other.suit, other.rank
         return t1 &lt; t2
 </pre><p>As an exercise, write an <code>__lt__</code> method for Time objects. You
-can use tuple comparison, but you also might consider 
+can use tuple comparison, but you also might consider
 comparing integers.</p>
 <h2 class="section" id="sec213">18.4&#XA0;&#XA0;Decks</h2>
 <p>
@@ -267,7 +269,7 @@ using the function <span class="c004">shuffle</span> from the <span class="c004"
 <a id="hevea_default1599"></a>
 <a id="hevea_default1600"></a>
 <a id="hevea_default1601"></a></p><pre class="verbatim"># inside class Deck:
-            
+
     def shuffle(self):
         random.shuffle(self.cards)
 </pre><p>Don&#X2019;t forget to import <span class="c004">random</span>.</p><p>As an exercise, write a Deck method named <span class="c004">sort</span> that uses the
@@ -378,7 +380,7 @@ relationship; in this case it indicates that Hand inherits
 from Deck.</p><p>The standard arrow head represents a HAS-A
 relationship; in this case a Deck has references to Card
 objects.
-<a id="hevea_default1622"></a></p><p>The star (<span class="c004">*</span>) near the arrow head is a 
+<a id="hevea_default1622"></a></p><p>The star (<span class="c004">*</span>) near the arrow head is a
 <span class="c010">multiplicity</span>; it indicates how many Cards a Deck has.
 A multiplicity can be a simple number, like <span class="c004">52</span>, a range,
 like <span class="c004">5..7</span> or a star, which indicates that a Deck can
@@ -391,7 +393,7 @@ like list and dict are usually not included in class diagrams.</p>
 <p>
 <a id="hevea_default1623"></a></p><p>Inheritance can make debugging difficult because when you invoke a
 method on an object, it might be hard to figure out which method will
-be invoked. 
+be invoked.
 <a id="hevea_default1624"></a></p><p>Suppose you are writing a function that works with Hand objects.
 You would like it to work with all kinds of Hands, like
 PokerHands, BridgeHands, etc. If you invoke a method like
@@ -437,7 +439,7 @@ principle&#X201D;, your code will collapse like (sorry) a house of cards.
 <span class="c004">Point</span>, <span class="c004">Rectangle</span> and <span class="c004">Time</span>&#X2014;and defined classes to
 represent them. In each case there is an obvious correspondence
 between the object and some entity in the real world (or at least a
-mathematical world). 
+mathematical world).
 <a id="hevea_default1634"></a></p><p>But sometimes it is less obvious what objects you need
 and how they should interact. In that case you need a different
 development plan. In the same way that we discovered function
@@ -446,8 +448,8 @@ class interfaces by <span class="c010">data encapsulation</span>.
 <a id="hevea_default1635"></a></p><p>Markov analysis, from Section&#XA0;<a href="thinkpython2014.html#markov">13.8</a>, provides a good example.
 If you download my code from <a href="http://thinkpython2.com/code/markov.py"><span class="c004">http://thinkpython2.com/code/markov.py</span></a>,
 you&#X2019;ll see that it uses two global variables&#X2014;<code>suffix_map</code> and
-<code>prefix</code>&#X2014;that are read and written from several functions.</p><pre class="verbatim">suffix_map = {}        
-prefix = ()            
+<code>prefix</code>&#X2014;that are read and written from several functions.</p><pre class="verbatim">suffix_map = {}
+prefix = ()
 </pre><p>Because these variables are global, we can only run one analysis at a
 time. If we read two texts, their prefixes and suffixes would be
 added to the same data structures (which makes for some interesting
@@ -457,7 +459,7 @@ Here&#X2019;s what that looks like:</p><pre class="verbatim">class Markov:
 
     def __init__(self):
         self.suffix_map = {}
-        self.prefix = ()    
+        self.prefix = ()
 </pre><p>Next, we transform the functions into methods. For example,
 here&#X2019;s <code>process_word</code>:</p><pre class="verbatim">    def process_word(self, word, order=2):
         if len(self.prefix) &lt; order:
@@ -470,7 +472,7 @@ here&#X2019;s <code>process_word</code>:</p><pre class="verbatim">    def proces
             # if there is no entry for this prefix, make one
             self.suffix_map[self.prefix] = [word]
 
-        self.prefix = shift(self.prefix, word)        
+        self.prefix = shift(self.prefix, word)
 </pre><p>Transforming a program like this&#X2014;changing the design without
 changing the behavior&#X2014;is another example of refactoring
 (see Section&#XA0;<a href="thinkpython2005.html#refactoring">4.7</a>).
@@ -517,7 +519,7 @@ a HAS-A relationship, how many references there are to instances
 of another class.
 <a id="hevea_default1652"></a></dd><dt class="dt-description"><span class="c010">data encapsulation:</span></dt><dd class="dd-description"> A program development plan that
 involves a prototype using global variables and a final version
-that makes the global variables into instance attributes. 
+that makes the global variables into instance attributes.
 <a id="hevea_default1653"></a>
 <a id="hevea_default1654"></a></dd></dl>
 <h2 class="section" id="sec221">18.12&#XA0;&#XA0;Exercises</h2>
@@ -644,4 +646,6 @@ about it.  Please consider filling out <a href="http://spreadsheets.google.com/v
 <a href="index.html"><img src="images/up.png" ALT="Up"></a>
 <a href="thinkpython2020.html"><img src="images/next.png" ALT="Next"></a>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>

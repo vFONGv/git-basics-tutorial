@@ -9,10 +9,30 @@
 <title>Case study: data structure selection</title>
 </head>
 <body>
-<a href="thinkpython2013.html"><img src="images/back.png" ALT="Previous"></a>
-<a href="index.html"><img src="images/up.png" ALT="Up"></a>
-<a href="thinkpython2015.html"><img src="images/next.png" ALT="Next"></a>
-<hr>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>Think Python</strong> - How to Think like a Computer Scientist (2e) <em>by Allen B. Downey</em></a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://greenteapress.com/thinkpython2/html/index.html"><span class="glyphicon glyphicon glyphicon-book" aria-hidden="true"></span></a></li>
+          <li><a href="thinkpython2013.html"><span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+          <li><a href="thinkpython2015.html"><span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+          <li><a href="http://amzn.to/1VUYQUU"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+        </ul>
+      <div>
+    </div><!-- /.container-fluid -->
+  </nav>
 <table>
 
 <tr>
@@ -23,7 +43,7 @@
 <td valign="top" width="600" style="padding: 20px 20px;">
 
 <p>
-<a href="http://amzn.to/1VUYQUU">Buy this book at Amazon.com</a>
+
 
 <h1 class="chapter" id="sec151">Chapter&#XA0;13&#XA0;&#XA0;Case study: data structure selection</h1>
 <p>At this point you have learned about Python&#X2019;s core data structures,
@@ -53,7 +73,7 @@ if we can make Python swear:</em></p><pre class="verbatim"><em>&gt;&gt;&gt; impo
 <a id="hevea_default1137"></a>
 <a id="hevea_default1138"></a>
 <a id="hevea_default1139"></a></p></div><div class="theorem"><span class="c010">Exercise&#XA0;2</span>&#XA0;&#XA0;
-<a id="hevea_default1140"></a><p><em>Go to Project Gutenberg (</em><a href="http://gutenberg.org"><span class="c004"><em>http://gutenberg.org</em></span></a><em>) and download 
+<a id="hevea_default1140"></a><p><em>Go to Project Gutenberg (</em><a href="http://gutenberg.org"><span class="c004"><em>http://gutenberg.org</em></span></a><em>) and download
 your favorite out-of-copyright book in plain text format.
 </em><a id="hevea_default1141"></a>
 <a id="hevea_default1142"></a></p><p><em>Modify your program from the previous exercise to read the book
@@ -119,7 +139,7 @@ for i in range(10):
 random values from continuous distributions including
 Gaussian, exponential, gamma, and a few more.</p><div class="theorem"><span class="c010">Exercise&#XA0;5</span>&#XA0;&#XA0;
 <a id="hevea_default1157"></a><p><em>Write a function named <code>choose_from_hist</code> that takes
-a histogram as defined in Section&#XA0;</em><a href="thinkpython2012.html#histogram"><em>11.2</em></a><em> and returns a 
+a histogram as defined in Section&#XA0;</em><a href="thinkpython2012.html#histogram"><em>11.2</em></a><em> and returns a
 random value from the histogram, chosen with probability
 in proportion to frequency. For example, for this histogram:</em></p><pre class="verbatim"><em>&gt;&gt;&gt; t = ['a', 'a', 'b']
 &gt;&gt;&gt; hist = histogram(t)
@@ -145,7 +165,7 @@ def process_file(filename):
 
 def process_line(line, hist):
     line = line.replace('-', ' ')
-    
+
     for word in line.split():
         word = word.strip(string.punctuation + string.whitespace)
         word = word.lower()
@@ -258,7 +278,7 @@ print("Words in the book that aren't in the word list:")
 for word in diff:
     print(word, end=' ')
 </pre><p>Here are some of the results from <em>Emma</em>:</p><pre class="verbatim">Words in the book that aren't in the word list:
-rencontre jane's blanche woodhouses disingenuousness 
+rencontre jane's blanche woodhouses disingenuousness
 friend's venice apartment ...
 </pre><p>Some of these words are names and possessives. Others, like
 &#X201C;rencontre&#X201D;, are no longer in common use. But a few are common
@@ -382,7 +402,7 @@ prefixes as keys in a dictionary, so that rules out lists.
 With tuples, you can&#X2019;t append or remove, but you can use
 the addition operator to form a new tuple:</p><pre class="verbatim">def shift(prefix, word):
     return prefix[1:] + (word,)
-</pre><p><span class="c004">shift</span> takes a tuple of words, <span class="c004">prefix</span>, and a string, 
+</pre><p><span class="c004">shift</span> takes a tuple of words, <span class="c004">prefix</span>, and a string,
 <span class="c004">word</span>, and forms a new tuple that has all the words
 in <span class="c004">prefix</span> except the first, and <span class="c004">word</span> added to
 the end.</p><p>For the collection of suffixes, the operations we need to
@@ -473,11 +493,11 @@ argument is provided.
 <a id="hevea_default1196"></a></dd><dt class="dt-description"><span class="c010">override:</span></dt><dd class="dd-description"> To replace a default value with an argument.
 <a id="hevea_default1197"></a></dd><dt class="dt-description"><span class="c010">benchmarking:</span></dt><dd class="dd-description"> The process of choosing between data structures
 by implementing alternatives and testing them on a sample of the
-possible inputs. 
+possible inputs.
 <a id="hevea_default1198"></a></dd><dt class="dt-description"><span class="c010">rubber duck debugging:</span></dt><dd class="dd-description"> Debugging by explaining your problem
 to an inanimate object such as a rubber duck. Articulating the
 problem can help you solve it, even if the rubber duck doesn&#X2019;t know
-Python. 
+Python.
 <a id="hevea_default1199"></a>
 <a id="hevea_default1200"></a></dd></dl>
 <h2 class="section" id="sec163">13.12&#XA0;&#XA0;Exercises</h2>
@@ -508,7 +528,7 @@ If you installed Anaconda, you already have <span class="c004">matplotlib</span>
 otherwise you might have to install it.
 </em><a id="hevea_default1205"></a></p></div>
 <p>
-<a href="http://amzn.to/1VUYQUU">Buy this book at Amazon.com</a>
+
 
 </td>
 
@@ -562,11 +582,30 @@ about it.  Please consider filling out <a href="http://spreadsheets.google.com/v
 </td>
 </tr>
 </table>
-<hr>
-<a href="thinkpython2013.html"><img src="images/back.png" ALT="Previous"></a>
-<a href="index.html"><img src="images/up.png" ALT="Up"></a>
-<a href="thinkpython2015.html"><img src="images/next.png" ALT="Next"></a>
-</body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>Think Python</strong> - How to Think like a Computer Scientist (2e) <em>by Allen B. Downey</em></a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://greenteapress.com/thinkpython2/html/index.html"><span class="glyphicon glyphicon glyphicon-book" aria-hidden="true"></span></a></li>
+          <li><a href="thinkpython2013.html"><span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+          <li><a href="thinkpython2015.html"><span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+          <li><a href="http://amzn.to/1VUYQUU"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+        </ul>
+      <div>
+    </div><!-- /.container-fluid -->
+  </nav></body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>

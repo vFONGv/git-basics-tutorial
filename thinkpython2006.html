@@ -37,10 +37,10 @@
 
 <tr>
 
-<td valign="top" width="100" bgcolor="#b6459a">
+<td valign="top" width="100" bgcolor="#b6459a" id="col-left">
 </td>
 
-<td valign="top" width="600" style="padding: 20px 20px;">
+<td valign="top" id="content">
 
 <p>
 
@@ -93,7 +93,7 @@ operand is a <span class="c004">float</span>.
 <a id="hevea_default320"></a>
 <a id="hevea_default321"></a>
 <a id="hevea_default322"></a></p><p>A <span class="c010">boolean expression</span> is an expression that is either true
-or false. The following examples use the 
+or false. The following examples use the
 operator <span class="c004">==</span>, which compares two operands and produces
 <span class="c004">True</span> if they are equal and <span class="c004">False</span> otherwise:</p><pre class="verbatim">&gt;&gt;&gt; 5 == 5
 True
@@ -313,7 +313,7 @@ stack at the same time.</p><p>Figure&#XA0;<a href="thinkpython2006.html#fig.stac
 </table></div>
 <a id="fig.stack2"></a>
 <div class="center"><hr class="c019"></div></blockquote><p>As usual, the top of the stack is the frame for <code>__main__</code>.
-It is empty because we did not create any variables in 
+It is empty because we did not create any variables in
 <code>__main__</code> or pass any arguments to it.
 <a id="hevea_default369"></a>
 <a id="hevea_default370"></a></p><p>The four <span class="c004">countdown</span> frames have different values for the
@@ -342,7 +342,7 @@ message when the maximum recursion depth is reached:
 <a id="hevea_default377"></a></p><pre class="verbatim">  File "&lt;stdin&gt;", line 2, in recurse
   File "&lt;stdin&gt;", line 2, in recurse
   File "&lt;stdin&gt;", line 2, in recurse
-                  .   
+                  .
                   .
                   .
   File "&lt;stdin&gt;", line 2, in recurse
@@ -439,12 +439,12 @@ assume that everything they say is correct.</p>
 <h2 class="section" id="sec67">5.13&#XA0;&#XA0;Glossary</h2>
 <dl class="description"><dt class="dt-description"><span class="c010">floor division:</span></dt><dd class="dd-description"> An operator, denoted <span class="c004">//</span>, that divides two
 numbers and rounds down (toward zero) to an integer.
-<a id="hevea_default395"></a> 
+<a id="hevea_default395"></a>
 <a id="hevea_default396"></a></dd><dt class="dt-description"><span class="c010">modulus operator:</span></dt><dd class="dd-description"> An operator, denoted with a percent sign
 (<span class="c004">%</span>), that works on integers and returns the remainder when one
 number is divided by another.
 <a id="hevea_default397"></a>
-<a id="hevea_default398"></a></dd><dt class="dt-description"><span class="c010">boolean expression:</span></dt><dd class="dd-description"> An expression whose value is either 
+<a id="hevea_default398"></a></dd><dt class="dt-description"><span class="c010">boolean expression:</span></dt><dd class="dd-description"> An expression whose value is either
 <span class="c004">True</span> or <span class="c004">False</span>.
 <a id="hevea_default399"></a>
 <a id="hevea_default400"></a></dd><dt class="dt-description"><span class="c010">relational operator:</span></dt><dd class="dd-description"> One of the operators that compares
@@ -526,7 +526,7 @@ recurse(3, 0)
 know in order to use this function (and nothing else).</em></li></ol></div><p>The following exercises use the <span class="c004">turtle</span> module, described in
 Chapter&#XA0;<a href="thinkpython2005.html#turtlechap">4</a>:
 <a id="hevea_default415"></a></p><div class="theorem"><span class="c010">Exercise&#XA0;5</span>&#XA0;&#XA0;<p><em>Read the following function and see if you can figure out
-what it does (see the examples in Chapter&#XA0;</em><a href="thinkpython2005.html#turtlechap"><em>4</em></a><em>). Then run it 
+what it does (see the examples in Chapter&#XA0;</em><a href="thinkpython2005.html#turtlechap"><em>4</em></a><em>). Then run it
 and see if you got it right.</em></p><pre class="verbatim"><em>def draw(t, length, n):
     if n == 0:
         return
@@ -558,7 +558,7 @@ implement your favorite.</em></li></ol></div>
 
 </td>
 
-<td width=130 valign="top">
+<td width=130 valign="top" id="col-right">
 
 <p>
 <h4>Are you using one of our books in a class?</h4>  We'd like to know

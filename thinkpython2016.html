@@ -37,10 +37,10 @@
 
 <tr>
 
-<td valign="top" width="100" bgcolor="#b6459a">
+<td valign="top" width="100" bgcolor="#b6459a" id="col-left">
 </td>
 
-<td valign="top" width="600" style="padding: 20px 20px;">
+<td valign="top" id="content">
 
 <p>
 
@@ -48,7 +48,7 @@
 <h1 class="chapter" id="sec177">Chapter&#XA0;15&#XA0;&#XA0;Classes and objects</h1>
 <p>
 <a id="clobjects"></a></p><p>At this point you know how to use
-functions to organize code and 
+functions to organize code and
 built-in types to organize data. The next step is to learn
 &#X201C;object-oriented programming&#X201D;, which uses programmer-defined types
 to organize both code and data. Object-oriented programming is
@@ -171,7 +171,7 @@ either vertical or horizontal.
 the other, so we&#X2019;ll implement the first one, just as an example.
 <a id="hevea_default1349"></a>
 <a id="hevea_default1350"></a></p><p>Here is the class definition:</p><pre class="verbatim">class Rectangle:
-    """Represents a rectangle. 
+    """Represents a rectangle.
 
     attributes: width, height, corner.
     """
@@ -234,7 +234,7 @@ width and height of the rectangle:</p><pre class="verbatim">def grow_rectangle(r
 &gt;&gt;&gt; box.width, box.height
 (200.0, 400.0)
 </pre><p>Inside the function, <span class="c004">rect</span> is an
-alias for <span class="c004">box</span>, so when the function modifies <span class="c004">rect</span>, 
+alias for <span class="c004">box</span>, so when the function modifies <span class="c004">rect</span>,
 <span class="c004">box</span> changes.</p><p>As an exercise, write a function named <code>move_rectangle</code> that takes
 a Rectangle and two numbers named <span class="c004">dx</span> and <span class="c004">dy</span>. It
 should change the location of the rectangle by adding <span class="c004">dx</span>
@@ -303,7 +303,7 @@ invoking <code>grow_rectangle</code> on one of the Rectangles would not
 affect the other, but invoking <code>move_rectangle</code> on either would
 affect both! This behavior is confusing and error-prone.
 <a id="hevea_default1377"></a>
-<a id="hevea_default1378"></a></p><p>Fortunately, the <span class="c004">copy</span> module provides a method named <span class="c004">deepcopy</span> that copies not only the object but also 
+<a id="hevea_default1378"></a></p><p>Fortunately, the <span class="c004">copy</span> module provides a method named <span class="c004">deepcopy</span> that copies not only the object but also
 the objects it refers to, and the objects <em>they</em> refer to,
 and so on.
 You will not be surprised to learn that this operation is
@@ -401,7 +401,7 @@ a Circle and draws the Circle.</em></p><p><em>Solution: </em><a href="http://thi
 
 </td>
 
-<td width=130 valign="top">
+<td width=130 valign="top" id="col-right">
 
 <p>
 <h4>Are you using one of our books in a class?</h4>  We'd like to know

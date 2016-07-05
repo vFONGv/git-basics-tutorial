@@ -231,7 +231,9 @@ in index.html, insert before `<table>`
 > ```
 
 > find:
+> ```
 > <a href="http://amzn.to/1VUYQUU">Buy this book at Amazon.com</a>
+> ```
 > where:
 > ```
 > *.html

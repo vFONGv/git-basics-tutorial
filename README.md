@@ -144,7 +144,7 @@ with regex enabled
 
 > find:
 > ```
-> <a href="thinkpython2023.html"><img src="images/back.png" ALT="Previous"></a>
+> <a href="thinkpython2022.html"><img src="images/back.png" ALT="Previous"></a>
 > <a href="index.html"><img src="images/up.png" ALT="Up"></a>
 > <hr>
 > ```

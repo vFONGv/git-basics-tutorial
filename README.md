@@ -298,17 +298,15 @@ git checkout -b content
 append `thinkpython2.css`
 
 ```css
-td#col-left, td#col-right {
-  display: none;
-}
-
 body{
     font-family: "Open Sans";
     font-size: 18px;
-    padding-top: 50px;
+    padding-top: 60px;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom:10em;
     background-color: #eee;
+
 }
 
 blockquote {
@@ -318,6 +316,7 @@ blockquote {
 pre.verbatim {
     font-family: "Courier New";
     margin: 10px auto;
+    font-size: 16px;
 }
 
 table.c000 {

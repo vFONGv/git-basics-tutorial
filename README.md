@@ -4,7 +4,7 @@ to be written...
 
 ## Files in Demonstration
 
-To illustrate git in action, I pull text files from a great book, [ThinkPython2](http://greenteapress.com/thinkpython2), using wget.
+To illustrate git in action, I pulled text files from a great book, [ThinkPython2](http://greenteapress.com/thinkpython2), using wget.
 
 ## Install git
 in Terminal

@@ -43,7 +43,7 @@ With Sublimetext installed, in Terminal
 subl .
 ```
 
-Use <kbd>⇧</kbd><kbd>⌘</kbd><kbd>f</kbd> call out find and replace panel.
+Use <kbd>⇧</kbd><kbd>⌘</kbd><kbd>f</kbd> call out find and replace panel.(In Windows use <kbd>Ctrl</kbd> <kbd>Shift<kbd><kbd>f<kbd>)
 
 (Atom editor has an unsolved issue on finding and replacing with regex...)
 
@@ -91,6 +91,7 @@ git checkout -b add-bootstrap
 > ```
 
 > find:
+>
 > ```html
 > </html>
 > ```
@@ -141,11 +142,51 @@ with regex enabled
 >   </nav>
 > ```
 
+>find:
+>
+>```
+> <a href="index.html.1"><img src="images/up.png" ALT="Up"></a>
+> <a href="thinkpython2002.html"><img src="images/next.png" ALT="Next"></a>
+> <hr>
+>```
+> where:
+> ```
+> thinkpython2001.html
+> ```
+> replace:
+> ```html
+>   <nav class="navbar navbar-default navbar-fixed-top">
+>     <div class="container-fluid">
+>       <!-- Brand and toggle get grouped for better mobile display -->
+>       <div class="navbar-header">
+>         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+>           <span class="sr-only">Toggle navigation</span>
+>           <span class="icon-bar"></span>
+>           <span class="icon-bar"></span>
+>           <span class="icon-bar"></span>
+>         </button>
+>         <a class="navbar-brand" href="#"><strong>Think Python</strong> - How to Think like a Computer Scientist (2e) <em>by Allen B. Downey</em></a>
+>       </div>
+>       <div>
+>         <ul class="nav navbar-nav navbar-right">
+>           <li><a href="http://greenteapress.com/thinkpython2/html/index.html"><span class="glyphicon glyphicon glyphicon-book" aria-hidden="true"></span></a></li>
+>           <li><a href="$1"><span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>
+>           <li><a href="index.html"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+>           <li><a href="$3"><span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+>           <li><a href="http://amzn.to/1VUYQUU"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+>         </ul>
+>       <div>
+>     </div><!-- /.container-fluid -->
+>   </nav>
+> ```
+
+
 
 > find:
+>
 > ```
 > <a href="thinkpython2022.html"><img src="images/back.png" ALT="Previous"></a>
-> <a href="index.html"><img src="images/up.png" ALT="Up"></a>
+> <a href="index.html.1"><img src="images/up.png" ALT="Up"></a>
 > <hr>
 > ```
 > where:
@@ -216,6 +257,7 @@ in index.html, insert before `<table>`
 > ```
 > replace with nothing:
 > ```
+>
 > ```
 
 > find:
@@ -228,6 +270,7 @@ in index.html, insert before `<table>`
 > ```
 > replace with nothing:
 > ```
+>
 > ```
 
 > find:
@@ -240,6 +283,7 @@ in index.html, insert before `<table>`
 > ```
 > replace with nothing:
 > ```
+>
 > ```
 
 in Terminal
@@ -298,6 +342,9 @@ git checkout -b content
 append `thinkpython2.css`
 
 ```css
+td#col-left, td#col-right {
+  display: none;
+}
 body{
     font-family: "Open Sans";
     font-size: 18px;

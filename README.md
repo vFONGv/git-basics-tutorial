@@ -43,7 +43,7 @@ With Sublimetext installed, in Terminal
 subl .
 ```
 
-Use <kbd>⇧</kbd><kbd>⌘</kbd><kbd>f</kbd> call out find and replace panel.(In Windows use <kbd>Ctrl</kbd> <kbd>Shift<kbd><kbd>f<kbd>)
+Use <kbd>⇧</kbd><kbd>⌘</kbd><kbd>f</kbd> call out find and replace panel.(In Windows use <kbd>Ctrl</kbd> <kbd>Shift</kbd><kbd>f</kbd>)
 
 (Atom editor has an unsolved issue on finding and replacing with regex...)
 
